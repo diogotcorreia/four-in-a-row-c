@@ -1,4 +1,4 @@
-// C-based Tic-Tac-Toe game by Diogo Correia and João Joaquim
+// C-based Four in a Row game by Diogo Correia
 
 // Libraries
 #include <stdio.h>
@@ -56,7 +56,7 @@ int main()
 // Prints the instructions to the console.
 void rules_instructions()
 {
-  printf("\n Welcome to this C-based 4-in-a-row game by Diogo Correia and João Joaquim!\n");
+  printf("\n Welcome to this C-based 4-in-a-row game by Diogo Correia!\n");
   printf("\n In order to win the game, you must have four of your characters aligned, either vertically, horizontally or diagonally.\n");
   printf("\n Player 1 plays with '%c' and Player 2 with '%c'.\n", PLAYER1, PLAYER2);
   printf("\n To start playing, choose the number correspondent to the column you wish to occupy, and press ENTER.\n");
@@ -153,8 +153,7 @@ void execute_play()
 // Checks if there is a winner. Does not check ties.
 char verify_winner()
 {
-  // TODO
-  int i, j, accumolated;
+  int i, j;
   for (i = 0; i < BOARD_COLUMNS; i++)
     // Same here
     for (j = 0; j < BOARD_ROWS; j++)
